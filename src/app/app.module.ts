@@ -10,6 +10,8 @@ import { FilaPageComponent } from './pages/fila-page/fila-page.component';
 import { FilaCircularPageComponent } from './pages/fila-circular-page/fila-circular-page.component';
 import { BasePageComponent } from './components/base-page/base-page.component';
 import { PresentationCardComponent } from './components/presentation-card/presentation-card.component';
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import { CodeViewerComponent } from './components/code-viewer/code-viewer.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +22,22 @@ import { PresentationCardComponent } from './components/presentation-card/presen
     FilaPageComponent,
     FilaCircularPageComponent,
     BasePageComponent,
-    PresentationCardComponent
+    PresentationCardComponent,
+    CodeViewerComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
+  imports: [BrowserModule, AppRoutingModule, HighlightModule],
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        coreLibraryLoader: () => import('highlight.js/lib/core'),
+        themePath: 'assets/styles/github-dark-dimmed.css',
+        languages: {
+          python: () => import('highlight.js/lib/languages/python'),
+        },
+      },
+    },
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
