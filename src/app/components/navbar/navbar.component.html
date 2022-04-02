@@ -6,8 +6,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a *ngFor="let route of routes" class="nav-link" [routerLink]="route.path" routerLinkActive="active">{{route.name}}</a>
+        <li class="nav-item" *ngFor="let route of routes">
+          <a class="nav-link" [routerLink]="route.path" routerLinkActive="active">{{route.name}}</a>
         </li>
       </ul>
     </div>
