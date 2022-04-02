@@ -15,6 +15,8 @@ import { CodeViewerComponent } from './components/code-viewer/code-viewer.compon
 import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PilhaGameComponent } from './components/games/pilha-game/pilha-game.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BasePageComponent,
     PresentationCardComponent,
     CodeViewerComponent,
+    PilhaGameComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +38,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HighlightModule,
     HttpClientModule,
     NgxSpinnerModule,
+    ReactiveFormsModule,
   ],
   providers: [
     {
