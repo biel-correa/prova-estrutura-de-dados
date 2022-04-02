@@ -15,4 +15,10 @@ export class CodeService {
   getPilhaCode() {
     return this.http.get('assets/code/pilha.py', { responseType: 'text' });
   }
+
+  getFilaCircularCode() {
+    return this.http.get('assets/code/filaCircular.py', {
+      responseType: 'text',
+    });
+  }
 }
