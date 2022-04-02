@@ -9,6 +9,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { FilaPageComponent } from './pages/fila-page/fila-page.component';
 import { FilaCircularPageComponent } from './pages/fila-circular-page/fila-circular-page.component';
 import { BasePageComponent } from './components/base-page/base-page.component';
+import { PresentationCardComponent } from './components/presentation-card/presentation-card.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BasePageComponent } from './components/base-page/base-page.component';
     HomePageComponent,
     FilaPageComponent,
     FilaCircularPageComponent,
-    BasePageComponent
+    BasePageComponent,
+    PresentationCardComponent
   ],
   imports: [
     BrowserModule,
