@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
 export class CodeService {
   constructor(private http: HttpClient) {}
 
-  getFilaCode<T>(): Observable<T> {
-    return this.http.get<T>('assets/code/fila.py');
+  getFilaCode() {
+    return this.http.get('assets/code/fila.py', { responseType: 'text' });
   }
 
   getPilhaCode() {
