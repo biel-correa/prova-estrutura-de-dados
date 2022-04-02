@@ -12,6 +12,7 @@ import { BasePageComponent } from './components/base-page/base-page.component';
 import { PresentationCardComponent } from './components/presentation-card/presentation-card.component';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { CodeViewerComponent } from './components/code-viewer/code-viewer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { CodeViewerComponent } from './components/code-viewer/code-viewer.compon
     PresentationCardComponent,
     CodeViewerComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HighlightModule],
+  imports: [BrowserModule, AppRoutingModule, HighlightModule, HttpClientModule],
   providers: [
     {
       provide: HIGHLIGHT_OPTIONS,
