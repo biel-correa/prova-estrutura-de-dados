@@ -1,4 +1,5 @@
 <base-page>
   <app-presentation-card [data]="presentationCard"></app-presentation-card>
-  <app-code-viewer [code]="code"></app-code-viewer>
+  <app-code-viewer [code]="code" *ngIf="code"></app-code-viewer>
+  <ngx-spinner type="ball-spin-fade" [fullScreen]="false" color="#fff"></ngx-spinner>
 </base-page>

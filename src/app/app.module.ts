@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,8 @@ import { PresentationCardComponent } from './components/presentation-card/presen
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { CodeViewerComponent } from './components/code-viewer/code-viewer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,14 @@ import { HttpClientModule } from '@angular/common/http';
     PresentationCardComponent,
     CodeViewerComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HighlightModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    HighlightModule,
+    HttpClientModule,
+    NgxSpinnerModule,
+  ],
   providers: [
     {
       provide: HIGHLIGHT_OPTIONS,
@@ -40,5 +49,6 @@ import { HttpClientModule } from '@angular/common/http';
     },
   ],
   bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}

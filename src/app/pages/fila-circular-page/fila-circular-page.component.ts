@@ -1,3 +1,4 @@
+import { NgxSpinnerService } from 'ngx-spinner';
 import { Component, OnInit } from '@angular/core';
 import { tap } from 'rxjs';
 import { PresentationCardContent } from 'src/app/models/PresentationCardContent.model';
@@ -16,18 +17,23 @@ export class FilaCircularPageComponent implements OnInit {
       'Neste tipo de estrutura, não é atribuído um comprimento fixo, pois seu tamanho limite é a capacidade de memória, onde é muito difícil ocupá-la totalmente. As estruturas mais utilizadas são as filas, pilhas, listas, tabelas de espalhamento e árvores.',
   };
 
-  constructor(private codeService: CodeService) {}
+  constructor(
+    private codeService: CodeService,
+    private spinner: NgxSpinnerService
+  ) {}
 
   ngOnInit(): void {
     this.getCode();
   }
 
   getCode(): void {
+    this.spinner.show();
     this.codeService
       .getFilaCircularCode()
       .pipe(
         tap((res) => {
           this.code = res;
+          this.spinner.hide();
         })
       )
       .subscribe();

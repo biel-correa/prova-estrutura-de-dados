@@ -1,3 +1,4 @@
+import { NgxSpinnerService } from 'ngx-spinner';
 import { Component, OnInit } from '@angular/core';
 import { tap } from 'rxjs';
 import { PresentationCardContent } from 'src/app/models/PresentationCardContent.model';
@@ -16,18 +17,23 @@ export class FilaPageComponent implements OnInit {
       'São estruturas de dados do tipo FIFO (first-in first-out), onde o primeiro elemento a ser inserido, será o primeiro a ser retirado, ou seja, adiciona-se itens no fim e remove-se do início.',
   };
 
-  constructor(private codeService: CodeService) {}
+  constructor(
+    private codeService: CodeService,
+    private spinner: NgxSpinnerService
+  ) {}
 
   ngOnInit(): void {
     this.getCode();
   }
 
   getCode(): void {
+    this.spinner.show();
     this.codeService
       .getFilaCode()
       .pipe(
         tap((res) => {
           this.code = res;
+          this.spinner.hide();
         })
       )
       .subscribe();
