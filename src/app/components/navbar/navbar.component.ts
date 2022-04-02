@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  routes: NavItenModel[] = [{ name: 'Pilha', path: 'pilha' }];
+  routes: NavItenModel[] = [
+    { name: 'Pilha', path: 'pilha' },
+    { name: 'Fila', path: 'fila' },
+    { name: 'Fila Circular', path: 'fila-circular' },
+  ];
 
   constructor() {}
 
