@@ -17,6 +17,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PilhaGameComponent } from './components/games/pilha-game/pilha-game.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FilaGameComponent } from './components/games/fila-game/fila-game.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     PresentationCardComponent,
     CodeViewerComponent,
     PilhaGameComponent,
+    FilaGameComponent,
   ],
   imports: [
     BrowserModule,
