@@ -1,3 +1,50 @@
 <base-page>
-  <p>home-page works!</p>
+  <h3>Integrantes:</h3>
+  <div class="row mb-3">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Gabriel Pereira Corrêa</h5>
+        <h6 class="card-subtitle mb-2 text-muted">202110886</h6>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <span class="">E-mail:</span>
+          <span class="badge badge-primary">
+            <a href="mailto:gabriel@correa.dev.br">gabriel@correa.dev.br</a>
+          </span>
+        </li>
+        <li class="list-group-item">
+          <span class="">GitHub:</span>
+          <span class="badge badge-primary">
+            <a href="https://github.com/biel-correa">biel-correa</a>
+          </span>
+        </li>
+        <li class="list-group-item">
+          <span class="">Site:</span>
+          <span class="badge badge-primary">
+            <a href="https://correa.dev.br">correa.dev.br</a>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <h3>Técnologias:</h3>
+  <div class="d-flex flex-wrap tecnologias">
+    <div class="card m-2">
+      <img src="assets/images/logo-angular.png" class="card-img-top" alt="angular logo">
+      <div class="card-body">
+        <h5 class="card-title">Angular</h5>
+        <p class="card-text">{{ 'Angular é uma plataforma de aplicações web de código-fonte aberto e front-end baseado em TypeScript liderado pela Equipe Angular do Google e por uma comunidade de indivíduos e corporações. Angular é uma reescrita completa do AngularJS, feito pela mesma equipe que o construiu.' | slice:0:100}}...</p>
+        <a href="https://angular.io/" class="btn btn-primary">Ver</a>
+      </div>
+    </div>
+    <div class="card m-2">
+      <img src="assets/images/logo-amplify.png" class="card-img-top" alt="angular logo">
+      <div class="card-body">
+        <h5 class="card-title">AWS Amplify</h5>
+        <p class="card-text">{{ 'Crie aplicações Web e móveis completas e extensíveis mais rapidamente. É fácil iniciar e escalar.' | slice:0:100}}...</p>
+        <a href="https://aws.amazon.com/pt/amplify/" class="btn btn-primary">Ver</a>
+      </div>
+    </div>
+  </div>
 </base-page>
