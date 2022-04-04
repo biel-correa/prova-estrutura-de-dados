@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PilhaGameComponent } from './components/games/pilha-game/pilha-game.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FilaGameComponent } from './components/games/fila-game/fila-game.component';
+import { FilaCircularGameComponent } from './components/games/fila-circular-game/fila-circular-game.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { FilaGameComponent } from './components/games/fila-game/fila-game.compon
     CodeViewerComponent,
     PilhaGameComponent,
     FilaGameComponent,
+    FilaCircularGameComponent,
   ],
   imports: [
     BrowserModule,

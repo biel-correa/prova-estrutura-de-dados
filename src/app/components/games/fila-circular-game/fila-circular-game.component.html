@@ -1,0 +1,38 @@
+<h3>Área de testes</h3>
+<form [formGroup]="formGroup">
+  <div class="row">
+    <div class="col-md-8 mb-2">
+      <input type="text" class="form-control" placeholder="Tamanho da Fila Circular" formControlName="tamanho">
+    </div>
+    <div class="col-md-4 mb-2">
+      <button class="btn btn-primary form-control" (click)="mudarTamanhoFila()" [disabled]="!this.formGroup.value.tamanho">Mudar tamanho</button>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-md-6 mb-2">
+      <input type="text" class="form-control" placeholder="Número ou texto" formControlName="novoValor">
+    </div>
+    <div class="col-md-2 mb-2">
+      <button class="btn btn-primary form-control" (click)="adicionar()" [disabled]="!this.formGroup.value.novoValor">Adicionar</button>
+    </div>
+    <div class="col-md-2 mb-2">
+      <button class="btn btn-warning form-control" (click)="remover()">Remover</button>
+    </div>
+    <div class="col-md-2 mb-2">
+      <button class="btn btn-danger form-control" (click)="limpar()">Limpar</button>
+    </div>
+  </div>
+</form>
+<div class="row">
+  <h4>Lista:</h4>
+  <div class="container">
+    <div class="card" *ngIf="filaCircular.filaCircular.length; else empty">
+      <ul class="list-group list-group-flush" *ngFor="let item of filaCircular.filaCircular">
+        <li class="list-group-item">{{item}}</li>
+      </ul>
+    </div>
+    <ng-template #empty>
+      <p>Lista vazia</p>
+    </ng-template>
+  </div>
+</div>
