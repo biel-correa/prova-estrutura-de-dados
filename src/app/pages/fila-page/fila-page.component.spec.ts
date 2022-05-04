@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FilaPageComponent } from './fila-page.component';
+import {HttpClientModule} from "@angular/common/http";
 
 describe('FilaPageComponent', () => {
   let component: FilaPageComponent;
@@ -8,7 +9,8 @@ describe('FilaPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FilaPageComponent ]
+      declarations: [ FilaPageComponent ],
+      imports: [HttpClientModule],
     })
     .compileComponents();
   });

@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FilaCircularPageComponent } from './fila-circular-page.component';
+import {HttpClientModule} from "@angular/common/http";
 
 describe('FilaCircularPageComponent', () => {
   let component: FilaCircularPageComponent;
@@ -8,7 +9,8 @@ describe('FilaCircularPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FilaCircularPageComponent ]
+      declarations: [ FilaCircularPageComponent ],
+      imports: [HttpClientModule],
     })
     .compileComponents();
   });
